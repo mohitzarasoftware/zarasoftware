@@ -1256,8 +1256,21 @@
 
 // footer start 
 .footer {
-  background-image: linear-gradient(45deg, #0b5a7b, #03151d);
+  // background-image: linear-gradient(45deg, #0b5a7b, #03151d);
+  background-color: var(--white);
   padding-block: 55px;
+  padding-bottom: 200px;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: url(../img/downloadbg.jfif) no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  // }
   & .footer-logo {
     height: 60px;
     width: 160px;
@@ -1345,9 +1358,6 @@
   & .contact-list {
     gap: 13px;
   }
-  & .social-icons {
-
-  }
   & .slider-nav-item {
     border-radius: 15px;
     color: #3f345f;
@@ -1402,18 +1412,19 @@
 
   }
   }
-}
-
-
-  .footer .slider-nav-item:nth-child(2) {
-    color: #40beff; }
-  .footer .slider-nav-item:nth-child(3) {
-    color: #311f9b; }
-  .footer .slider-nav-item:nth-child(4) {
-    color: #ff9259; }
-  .footer .slider-nav-item:nth-child(5) {
-    color: #38385f; }
-  .footer .slider-nav-item:after {
+  & .slider-nav-item:nth-child(2) {
+    color: #40beff; 
+  }
+  & .slider-nav-item:nth-child(3) {
+    color: #311f9b; 
+  }
+  & .slider-nav-item:nth-child(4) {
+    color: #ff9259; 
+  }
+  & .slider-nav-item:nth-child(5) {
+    color: #38385f; 
+  }
+  & .slider-nav-item:after {
     position: absolute;
     top: 50%;
     left: 100%;
@@ -1422,20 +1433,84 @@
     width: 100%;
     background: url(../img/line.png) repeat 0 0;
     z-index: 0;
-    animation: slide 1s linear infinite; }
-  .process-scetion .slider-nav-item:last-child:after {
-    display: none; }
-  .process-scetion .slider-nav-item .ikon {
+    animation: slide 1s linear infinite;
+   }
+  & .process-scetion .slider-nav-item:last-child:after {
+    display: none; 
+  }
+  & .process-scetion .slider-nav-item .ikon {
     font-size: 50px;
     line-height: 80px; 
   }
+  @keyframes slide {
+    from {
+      background-position: 0 0; }
+    to {
+      background-position: 40px 0;
+    } 
+  }
+  & .footer_bg {
+    position: absolute;
+    bottom: 0;
+    // background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+    background: url("../img/bg\ 1.svg") no-repeat scroll center 0;
+    width: 100%;
+    height: 386px;
+    background-position: center;
+    background-size: cover;
+    & .footer_bg_one {
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+      width: 330px;
+      height: 105px;
+      background-size:100%;
+      position: absolute;
+      bottom: 0;
+      left: 30%;
+      -webkit-animation: myfirst 22s linear infinite;
+      animation: myfirst 22s linear infinite;
+    }
+    .footer_bg_two {
+      background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+      width: 88px;
+      height: 100px;
+    background-size:100%;
+      bottom: 0;
+      left: 38%;
+      position: absolute;
+      -webkit-animation: myfirst 30s linear infinite;
+      animation: myfirst 30s linear infinite;
+    }
+  }
+  @-moz-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
 
+  @-webkit-keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
 
-
-@keyframes slide {
-from {
-  background-position: 0 0; }
-to {
-  background-position: 40px 0; } 
+  @keyframes myfirst {
+    0% {
+      left: -25%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
 }
+
+
+
+
+
 
