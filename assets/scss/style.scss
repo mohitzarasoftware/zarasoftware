@@ -1,0 +1,63 @@
+@import "./variables";
+@import "./fonts.scss";
+@import "./mixins";
+@import "./common";
+@import "./index";
+@import "./navbar";
+
+
+.bg-lighting {
+    background-color:var(--white-light); 
+}
+[data-theme="light"] {
+    --white: #ffffff;
+    --white-light:#f8f9fa;
+    --white-dark:#fff;
+    --black: #000000;
+    --gradient:linear-gradient(45deg, #fff, #fff);
+    --gradient-bg:linear-gradient(45deg, #0b5a7b, #03151d);
+    --theme:#0d6efd;
+    --light-gray:#393838db;
+
+}
+
+[data-theme="dark"] {
+    --white: #000000;
+    --white-dark:#000;
+    --white-light:#000;
+    --black: #ffffff;
+    --gradient:linear-gradient(45deg, #0b5a7b, #03151d)!important;
+    --gradient-bg: $theme3 !important;
+    --theme:#fff;
+    --light-gray:#d4d4d4;
+    body {
+        background-color:#1c1c21 ;
+    }
+    .navbar {
+        background: linear-gradient(45deg, #0b5a7b, #03151d) !important;
+        & .light-logo {
+            display: none;
+        }
+        & .dark-logo {
+            display: block !important;
+        }
+        & .menu-btn {
+            & img {
+                filter: brightness(100);
+            }
+        }
+    }
+    .navbar-offcanvas {
+        & .of-logo-one {
+            display: none;
+        }
+        & .of-logo-two {
+            display: block !important;
+        }
+    }
+    .mega-menu-link  {
+        &:hover {
+            color: $black;
+        }
+    }
+}
