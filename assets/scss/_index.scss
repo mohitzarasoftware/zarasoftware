@@ -855,7 +855,7 @@
       padding: 15px;
       background-color: lighten(#e8a0bf, 42);
       margin-top: -32px;
-  
+      transition: all 0.3s ease-in-out;
     }
     & .procces-title {
       font-size: 15px;
@@ -865,7 +865,11 @@
       color: var(--black);
       text-overflow: ellipsis;
     }
-    
+    &:hover {
+      & .process-icon {
+        margin-top: 15px;
+      }
+    }
   }
   & .process-card-main  {
     &::before {
@@ -979,7 +983,7 @@
   padding-block: 50px;
   & .contact-card {
     border-radius: 6px;
-    background-color: var(--white);
+    background-color: lighten($theme2,40);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 40px 40px 40px 40px;
     margin-left: 150px;
@@ -1278,13 +1282,13 @@
   & .footer-para {
     font-size: 15px;
     line-height: 27px;
-    color: #fefefe;
+    color: var(--light-gray);
     margin-top: 10px;
   }
   & .footer-heading {
     font-size: 18px;
     font-weight: 600;
-    color: #fff;
+    color: var(--theme);
     padding-bottom: 4px;
     margin-bottom: 18px;
     &::before {
@@ -1302,14 +1306,15 @@
     gap: 10px;
     & .footer-link {
       font-size: 15px;
-      color: #fefefe;
+      font-weight: 500;
+      color: var(--black);
       transition: all 0.3s ease-in-out;
       &::before {
         content: "";
         position: absolute;
         top: 50%;
         left: 0;
-        background-color: #fff;
+        background-color: $theme1;
         height: 2px;
         transform: translate(0, -50%);
         width: 12px;
@@ -1344,7 +1349,7 @@
   & .contact-link {
     font-size: 15px;
     line-height: 27px;
-    color: #fefefe;
+    color: var(---black);
     transition: all 0.3s ease-in-out;
     & i {
       margin-right: 2px;

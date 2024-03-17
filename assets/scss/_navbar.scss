@@ -264,13 +264,6 @@
         }
   }
 }
-@include min-xl {
-  .navbar {
-    & .container {
-      max-width: 1230px;
-    }
-  }
-}
 // navbar offcanvas start 
 .navbar-offcanvas {
     width: 500px;
