@@ -1698,6 +1698,8 @@
     background-position: center;
     // box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
     display: flex;
+    border-radius: 8px;
+    overflow: hidden;
   }
   & .carousel__face:nth-child(1) {
     background-image: url(../img/admin-pan-soft-service.jpeg);
