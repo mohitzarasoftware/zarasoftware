@@ -778,22 +778,16 @@
   }
 }
 // video section end
-
-
-
-// marquee section start 
-// .stroke-text-section {
-//   & .stroke-text {
-//     font-size: 50px;
-//     background: url(../img/admin-pan-soft-service.jpeg);
-//     background-clip: text;
-//     color: #000;
-//     -webkit-background-clip: text;
-//   }
-// }
-// marquee section end
+:root {
+  --primary-color: #733FC8;
+    --primary-accent-color: #A775F1;
+    --secondary-color: #48556A;
+    --tertiary-color: #19202D;
+    --lightest-gray-color: #CFCFCF; 
+}
 
 // testimonial section start 
+
 .testimonial-section {
   padding-block: 50px;
   & .testimonial-card {
@@ -830,6 +824,167 @@
       }
     }
   }
+  & .card {
+    grid-area: card;
+    box-sizing: border-box;
+    background: #733FC8;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 1em;
+    & .reviewer-data {
+      gap: 11px;
+    }
+    & .card__name {
+      grid-area: name;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffff;
+    } 
+    & .card__title {
+      grid-area: title;
+      color: #e6e6e6;
+      margin-top: 4px;
+      font-size: 14px;
+    }  
+    & .reviewer-img {
+      height: 45px;
+      width: 45px;
+      overflow: hidden;
+      border-radius: 50%;
+      & img {
+        
+      }
+    }
+    & .card__main-quote {
+      font-size:17px;
+      color: #fff;
+      line-height: 28px;
+      font-weight: 600;
+      margin: 1em 0;
+    }
+    & .card__testimonial {
+      font-size: 15px;
+      color: #e7e7e7;
+      line-height: 28px;
+  }
+  & .card-white {
+    & .card__name {
+      color: #363636;
+    } 
+    & .card__title {
+    color: #000;
+    }  
+  }
+}
+
+
+
+
+
+
+
+
+.accent-border {
+    border: 2px solid #A775F1;;
+}
+
+/* card variations stying */
+.card1 {
+    grid-area: card1;
+    background:#733FC8;;
+    color: var(--white-color);
+    background-image: url(../img/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+}
+
+.card2 {
+    grid-area: card2;
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+    background: var(--tertiary-color);
+    color: var(--white-color);
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card3,
+.card5 {
+    background: var(--white-color);
+    color: var(--secondary-color);
+}
+
+/*  tablet sized media query */
+@media (min-width: 600px) {
+
+    /* multiple cards layout */
+    .testimonial-inner {
+        display: grid;
+        grid-template-columns: minmax(250px, auto) minmax(250px, auto);
+        grid-template-areas:
+            "card1 card4"
+            "card2 card3"
+            "card5 card5";
+        gap: 2em;
+        padding: 2em;
+        align-items: unset;
+    }
+
+    .card {
+        margin: 0;
+    }
+}
+
+/* desktop sized media query */
+@media (min-width: 1100px) {
+
+    /* multiple cards layout */
+    .testimonial-inner {
+        grid-template-columns: repeat(4, minmax(200px, auto));
+        grid-template-areas:
+            "card1 card1 card2 card5"
+            "card3 card4 card4 card5";
+    }
+
+    .card {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .card1 {
+        background-position: 80% 0%;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--tertiary-color);
+    width: 400px;
+    margin: 2em auto;
+}
+
+.attribution a {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    background: var(--primary-accent-color);
+    color: var(--white-color);
+    padding: 1px 3px;
+}
 }
 // testimonial section end 
 
@@ -987,12 +1142,20 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding: 40px 40px 40px 40px;
     margin-left: 150px;
+    margin-top: 40px;
   }
   & .contact-left-card {
     background-color: $theme1;
     padding: 20px;
     margin-left: -150px;
     border-radius: 6px;
+    overflow: hidden;
+    transform: rotateX(var(--rX)) rotateY(var(--rY));
+    transition: 0.2s;
+    --rX: 0deg;
+    --rY: 0deg;
+    --bX: 50%;
+    --bY: 80%;
   }
   & .contact-heading {
     font-size: 18px;
@@ -1141,7 +1304,7 @@
 .group-input {
   & .text-input {
     font-size: 15px;
-    color: var(--black);
+    color: #000;
     outline: none;
     height: 50px;
     &:focus {
@@ -1150,7 +1313,8 @@
         & .text-label {
           transform: translateY(0);
           top: -10px;
-          background-color: var(--white);
+          // background-color: var(--white);
+          background-image: linear-gradient(to bottom, #fbe8c2, #ffffff);
           font-size: 14px;
         }
       }
@@ -1169,7 +1333,7 @@
   & .text-label {
     font-size: 15px;
     font-weight: 500;
-    color: var(--black);
+    color:#000;
     left: 8px;
     top: 50%;
     transform: translateY(-50%);
@@ -1219,12 +1383,14 @@
   & .accordion {
     gap: 12px;
     & .accordion-item{
-      // border: 1px solid lighten{var(--white), 40};
+      border-color: #4c4c4c;
       border-radius: 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
     }
     & .accordion-button {
       background-image: linear-gradient(45deg, #0b5a7b, #03151d);
       color: #fff;
+
       &::after {
         content: '';
         position: absolute;
@@ -1244,14 +1410,27 @@
         background-color: #fff;
         
       }
+      &:not(.collapsed) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    & .accordion-collapse {
+      border-color: #4c4c4c !important;
     }
   }
   & .accordion-body  {
     font-size: 15px;
     line-height: 27px;
+    background-color: var(--white);
+    font-size: 15px;
+    line-height: 27px;
+    color: var(--light-gray);
       & p {
         font-size: 15px;
         line-height: 27px;
+        color: var(--light-gray);
       }                                                                                                                                     
   }
 }
@@ -1307,7 +1486,7 @@
     & .footer-link {
       font-size: 15px;
       font-weight: 500;
-      color: var(--black);
+      color: var(--light-black);
       transition: all 0.3s ease-in-out;
       &::before {
         content: "";
@@ -1349,7 +1528,7 @@
   & .contact-link {
     font-size: 15px;
     line-height: 27px;
-    color: var(---black);
+    color: var(--light-black);
     transition: all 0.3s ease-in-out;
     & i {
       margin-right: 2px;
@@ -1470,6 +1649,7 @@
       left: 30%;
       -webkit-animation: myfirst 22s linear infinite;
       animation: myfirst 22s linear infinite;
+
     }
     .footer_bg_two {
       background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
