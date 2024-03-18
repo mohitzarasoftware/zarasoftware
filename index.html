@@ -1635,6 +1635,51 @@
     </section>
     <!-- our process section end -->
 
+    <!-- counter section start  -->
+    <section class="container-fluid counter-section common-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+              <div class="counter">
+                  <div class="counter-icon">
+                      <i class="fa fa-globe"></i>
+                  </div>
+                  <span class="counter-value">1963</span>
+                  <h3>Web Designing</h3>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+              <div class="counter blue">
+                  <div class="counter-icon">
+                      <i class="fa fa-rocket"></i>
+                  </div>
+                  <span class="counter-value">1854</span>
+                  <h3>Web Development</h3>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+              <div class="counter pink">
+                  <div class="counter-icon">
+                      <i class="fa fa-briefcase"></i>
+                  </div>
+                  <span class="counter-value">1756</span>
+                  <h3>Brand Building</h3>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+              <div class="counter purple">
+                  <div class="counter-icon">
+                      <i class="fa fa-mobile"></i>
+                  </div>
+                  <span class="counter-value">1823</span>
+                  <h3>Responsive Design</h3>
+              </div>
+          </div>
+      </div>
+    </div>
+    </section>
+    <!-- counter section end -->
+
     <!-- faq section start  -->
     <section class="container-fluid common-gap bg-lighting faq-section">
       <div class="container">
@@ -1690,9 +1735,9 @@
     <!-- contact us section start  -->
     <section class="container-fluid contact-section bg-ighting">
       <div class="container">
-        <div class="map-card overflow-hidden rounded-4" >
+        <!-- <div class="map-card overflow-hidden rounded-4" >
           <div id="map" class="h-100 w-100"></div>
-        </div>
+        </div> -->
         <div class="contact-card position-relative">
           <div class="row justify-content-end">
             <div class="col-lg-3 contact-left-card-main position-absolute">
@@ -1909,6 +1954,20 @@
         <div class="footer_bg_two"></div>
      </div>
     </footer>
+    <section class="container-fluid border-top copyright-section bg-lighting">
+      <div class="copyright-inner">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-auto">
+              <p class="mb-0 copright-title">
+                Copyright © 2020-2024 All Rights Reserved by <span>Zara Software Pvt Ltd.</span>
+              </p>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- footer end -->
 
   
@@ -2053,6 +2112,23 @@
         },
       },
       });
+    </script>
+
+    <!-- counter js  -->
+    <script>
+      $(document).ready(function(){
+        $('.counter-value').each(function(){
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            },{
+                duration: 3500,
+                easing: 'swing',
+                step: function (now){
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+    });
     </script>
 
     <!-- map js  -->
