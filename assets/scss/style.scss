@@ -6,9 +6,7 @@
 @import "./navbar";
 
 
-.bg-lighting {
-    background-color:var(--white-light); 
-}
+
 [data-theme="light"] {
     --white: #ffffff;
     --white-light:#f8f9fa;
@@ -61,4 +59,7 @@
             color: $black;
         }
     }
+}
+.bg-lighting {
+    background-color:var(--white-light); 
 }
