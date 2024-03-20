@@ -32,8 +32,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Great+Vibes&family=Lobster&display=swap" rel="stylesheet">
 
     <!-- ligthouse css  -->
-    <link rel="stylesheet" href="assets/libs/lightgallery/lg-zoom.css">
-    <link rel="stylesheet" href="assets/libs/lightgallery/lightgallery.css">
+    <!-- <!-- <link rel="stylesheet" href="assets/libs/lightgallery/lg-zoom.css"> -->
+    <link rel="stylesheet" href="assets/libs/lightgallery/glightbox.min.css"> -->
   </head>
   <body>
 
@@ -1048,7 +1048,6 @@
     <!-- slider section end -->
 
 
-
     <!-- Team section start  -->
     <section class="container-fluid team-section">
       <div class="container">
@@ -1296,54 +1295,19 @@
         </div>
         <div class="row mt-4 p-2">
           <div class="col-lg-7">
-
             <div class="swiper mySwiper video-card videoslider rounded-3 overflow-hidden">
-              <div class="swiper-wrapper">
+              <div class="swiper-wrapper box-container">
                 <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
+                  <div class="video h-100 glightbox" data-behaviour="video">
                     <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video h-100" data-behaviour="video">
-                    <iframe src="https://www.youtube.com/embed/uf3Ov1nYcIg?si=T4_NHj25La82aVZ-" class="video__iframe h-100 w-100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                  </div>
-                </div>
+              </div>
+              <div class="swiper-button-next slider-btn rounded-circle">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+              <div class="swiper-button-prev slider-btn rounded-circle">
+                <i class="fa-solid fa-angle-left"></i>
               </div>
             </div>
           </div>
@@ -1353,9 +1317,67 @@
     </section>
     <!-- video section end -->
 
+    <section id="examples" class="section">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <h3>
+                      <i class="fa fa-camera-retro heading-icon" aria-hidden="true"></i>
+                      Simple Image Gallery
+                  </h3>
+
+                  <ul class="box-container three-cols">
+                      <li class="box">
+                          <div class="inner">
+                              <a href="demo/img/large/gm1.jpg" class="glightbox">
+                                  <img src="demo/img/small/gm1.jpg" alt="image" />
+                              </a>
+                          </div>
+                      </li>
+                      <li class="box">
+                          <div class="inner">
+                              <a href="demo/img/large/gm2.jpg" class="glightbox">
+                                  <img src="demo/img/small/gm2.jpg" alt="image" />
+                              </a>
+                          </div>
+                      </li>
+                      <li class="box">
+                          <div class="inner">
+                              <a href="demo/img/large/gm3.jpg" class="glightbox">
+                                  <img src="demo/img/small/gm3.jpg" alt="image" />
+                              </a>
+                          </div>
+                      </li>
+                      <li class="box">
+                          <div class="inner">
+                              <a href="demo/img/large/gm4.jpg" class="glightbox">
+                                  <img src="demo/img/small/gm4.jpg" alt="image" />
+                              </a>
+                          </div>
+                      </li>
+                      <li class="box">
+                          <div class="inner">
+                              <a href="demo/img/large/gm5.jpg" class="glightbox">
+                                  <img src="demo/img/small/gm5.jpg" alt="image" />
+                              </a>
+                          </div>
+                      </li>
+                      <li class="box">
+                          <div class="inner">
+                              <a href="demo/img/large/gm6.jpg" class="glightbox">
+                                  <img src="demo/img/small/gm6.jpg" alt="image" />
+                              </a>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
     <!-- marquee section start  -->
     <section class="marquee-section container-fluid enable-animation">
-      <div class="container">
+      <div class="containe">
         <div class="main-wrapper">
           <div class="marquee-wrapper w-100">
             <div class="marquee-content">
@@ -1363,7 +1385,7 @@
                 <img src="assets/img/marquee.gif" alt="gif" class="h-100"/>
               </div>
               <div class="marquee-image">
-                <img src="assets/img/service1.png" alt="service" />
+                <img src="assets/img/service9.png" alt="service" />
               </div>
               <div class="marquee-image">
                 <img src="assets/img/service2.png" alt="service" />
@@ -1403,6 +1425,33 @@
               </div>
               <div class="marquee-image">
                 <img src="assets/img/service14.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service1.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service15.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service16.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service17.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service18.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service19.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service20.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service21.png" alt="service" />
+              </div>
+              <div class="marquee-image">
+                <img src="assets/img/service22.png" alt="service" />
               </div>
             </div>
         </div>
@@ -1984,6 +2033,7 @@
     </section>
     <!-- contact us section end -->
 
+
     <!-- footer start  -->
     <footer class="footer position-relative bg-lighting overflow-x-hidden">
       <div class="container">
@@ -2133,9 +2183,10 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.11&sensor=false" type="text/javascript"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src=""></script>
 
     <!-- text animation libary js  -->
-    <script src="assets/libs/text-animation/splitting.min.js"></script>
+    <script src="assets/libs/lightgallery/glightbox.min.js"></script>
 
     <script>
       document.querySelectorAll('#myTab a').forEach(function(everyitem){ 	
@@ -2369,6 +2420,14 @@
             selector: '.glightbox4'
         });
 
+    </script> 
+    <script>
+      var swiper = new Swiper(".videoslider", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     </script>
     <!-- light box js  -->
 
@@ -2378,35 +2437,6 @@
     </script>
     <!-- video js  -->
 
-    <!-- lighthouse js start -->
-    <script>
-      import lightGallery from "https://cdn.skypack.dev/lightgallery@2.0.0-beta.4";
-      import lgZoom from "https://cdn.skypack.dev/lightgallery@2.0.0-beta.4/plugins/zoom";
-      const $galleryContainer = document.getElementById("gallery-container");
-      const customButtons = `<button type="button" id="lg-toolbar-prev" aria-label="Previous slide" class="lg-toolbar-prev lg-icon">  </button><button type="button" id="lg-toolbar-next" aria-label="Next slide" class="lg-toolbar-next lg-icon">  </button>`;
-      $galleryContainer.addEventListener("lgInit", (event) => {
-          const pluginInstance = event.detail.instance;
-
-          // Note append and find are not jQuery methods
-          // These are utility methods provided by lightGallery
-          const $toolbar = pluginInstance.outer.find(".lg-toolbar");
-          $toolbar.prepend(customButtons);
-          document.getElementById("lg-toolbar-prev").addEventListener("click", () => {
-            pluginInstance.goToPrevSlide();
-          });
-          document.getElementById("lg-toolbar-next").addEventListener("click", () => {
-            pluginInstance.goToNextSlide();
-          });
-        });
-
-      lightGallery($galleryContainer, {
-          speed: 1000,
-          controls: false,
-          plugins: [lgZoom]
-        });
-
-    </script>
-    <!-- lighthouse js end -->
 
     <!-- navbar offcanvas start  -->
     <div class="offcanvas offcanvas-start navbar-offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">

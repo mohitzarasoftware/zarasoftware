@@ -6,7 +6,9 @@
 @import "./navbar";
 
 
-
+.bg-lighting {
+    background-color:#f8f9fa; 
+}
 [data-theme="light"] {
     --white: #ffffff;
     --white-light:#f8f9fa;
@@ -17,6 +19,9 @@
     --theme:#0d6efd;
     --light-gray:#393838db;
     --light-black:#333;
+    .bg-lighting {
+        background-color:#f8f9fa; 
+    }
 }
 
 [data-theme="dark"] {
@@ -29,6 +34,9 @@
     --theme:#fff;
     --light-gray:#d4d4d4;
     --light-black:#fff;
+    .bg-lighting {
+        background-color:#000; 
+    }
     body {
         background-color:#1c1c21 ;
     }
@@ -59,7 +67,4 @@
             color: $black;
         }
     }
-}
-.bg-lighting {
-    background-color:var(--white-light); 
 }

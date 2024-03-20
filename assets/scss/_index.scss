@@ -773,6 +773,16 @@
       cursor: pointer;
     }
   }
+  & .slider-btn {
+    height: 32px;
+    width: 32px;
+    background-color: #333;
+    color: #fff;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 // video section end
 
@@ -970,6 +980,7 @@
 
 // proccesing section start 
 .process-section {
+  margin-top: 50px;
   & .proccess-inner {
     margin-top: 28px;
     // gap: 32px;
@@ -1413,6 +1424,7 @@ select:-webkit-autofill:focus {
 .faq-section {
   padding-top: 40px;
   padding-bottom: 50px;
+  margin-top: 50px;
   & .accordion {
     gap: 12px;
     & .accordion-item{
