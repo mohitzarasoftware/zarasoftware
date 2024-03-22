@@ -2155,3 +2155,73 @@ select:-webkit-autofill:focus {
   }
 }
 // marquee section end
+
+// income calendar button section start
+.income-calculator-button-section {
+  margin-bottom: 40px;
+}
+// income calendar button section end
+
+
+// calculator page start 
+.calculator-page {
+  margin-top: 55px;
+  margin-bottom: 45px;
+  & .calculator-card {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    & .calculator-card-header {
+      background-image: linear-gradient(45deg, #0b5a7b, #03151d);
+      padding: 15px;
+    }
+    & .calculator-header-title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff ;
+    }
+    & .calculator-data {
+      padding:25px 15px;
+      & .calculator-card-title {
+        font-size: 16px;
+        font-weight: 500;
+        color: $theme1
+      }
+      & .calculator-card-subtitle {
+        font-size: 15px;
+        margin-top: 3px;
+        color: #333;
+      }
+      & .calculator-input {
+        height: 42px;
+      }
+      & .calculator-result {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+  & .calculator-sidebar  {
+    background-image: linear-gradient(45deg, #0b5a7b, #03151d);
+    padding: 14px;
+    border-radius: 8px;
+    & .calculator-sidebar-title{
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+    }
+    & .calculator-sidebar-money {
+      font-size: 19px;
+      font-weight: 600;
+      color: #fff;
+    }
+    &  .calculator-sidebar-data {
+      padding-block: 12px;
+    }
+    & .calculator-sidebar-img {
+      margin-block:20px;
+      height: 160px;
+    }
+  }
+}
+// calculator page end
