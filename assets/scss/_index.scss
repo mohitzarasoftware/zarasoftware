@@ -527,6 +527,30 @@
     line-height: 27px;
   }
 }
+@include lg {
+  .game-services {
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    & .game-service-bg {
+      padding-top: 45px;
+      padding-bottom: 40px;
+      & .service-row-one {
+        margin-bottom: 0;
+      }
+      & .service-row-two {
+        margin-top: 0;
+      }
+
+    }
+  }
+}
+@include md {
+  .game-services {
+    & .game-card-heading {
+      font-size: 18px;
+    }
+  }
+}
 // service two section end
 
 
@@ -1251,6 +1275,14 @@
       }
       
     }
+  }
+}
+@include lg {
+  .process-section {
+    & .proccess-inner {
+      gap: 25px 0;
+    }
+
   }
 }
 // proccesing section end

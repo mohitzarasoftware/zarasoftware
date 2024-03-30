@@ -297,6 +297,8 @@ opacity: .5;
         }
     }
 }
+
+
 // heading section end
 
 // common gap start 
@@ -304,4 +306,22 @@ opacity: .5;
     margin-top: 50px;
 }
 // common gap end
+
+@include md {
+    .heading-section {
+        & .main-heading {
+            font-size: 28px;
+        }
+    }
+}
+@include sm {
+    .heading-section {
+        & .main-heading {
+            font-size: 24px;
+        }
+    }
+    .common-gap {
+        margin-top: 45px;
+    }
+}
 
