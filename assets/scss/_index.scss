@@ -2565,8 +2565,6 @@ select:-webkit-autofill:focus {
 
 // new section start 
 .popular-section {
-  padding-top: 50px;
-  padding-bottom: 55px;
   & .boxdiv {
     background: $light;
     padding-top: 15px;
@@ -2612,6 +2610,7 @@ select:-webkit-autofill:focus {
   & .choose-card {
     overflow: hidden;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     & .choose-card-title {
       font-size: 18px;
       font-weight: 600;
@@ -2784,3 +2783,11 @@ select:-webkit-autofill:focus {
   }
 }
 // provide section end
+
+
+// helpless section start 
+.helpless-section {
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+// helpless section end
