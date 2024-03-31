@@ -2678,6 +2678,11 @@ select:-webkit-autofill:focus {
       }
     }
   }
+  & .choose-content {
+    & p {
+      line-height: 29px;
+    }
+  }
 }
 // new section two end
 
