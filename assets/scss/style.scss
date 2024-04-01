@@ -20,6 +20,7 @@
     --light-gray:#393838db;
     --light-black:#333;
     --bordre-color:#dee2e6;
+
     .bg-lighting {
         background-color:#f8f9fa; 
     }
@@ -67,6 +68,13 @@
     .mega-menu-link  {
         &:hover {
             color: $black;
+        }
+    }
+    .our-mission-section {
+        & .our-value-icon {
+            & img {
+                filter: invert(1);
+            }
         }
     }
 }
