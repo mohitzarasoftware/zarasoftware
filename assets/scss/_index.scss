@@ -1,3 +1,75 @@
+[data-theme="light"] {
+  --white: #ffffff;
+  --white-light:#f8f9fa;
+  --white-dark:#fff;
+  --black: #000000;
+  --gradient:linear-gradient(45deg, #fff, #fff);
+  --gradient-bg:linear-gradient(45deg, #0b5a7b, #03151d);
+  --theme:#0d6efd;
+  --light-gray:#393838db;
+  --light-black:#333;
+  --bordre-color:#dee2e6;
+  $border-color:#dee2e6;
+
+  .bg-lighting {
+      background-color:#f8f9fa; 
+  }
+}
+
+[data-theme="dark"] {
+  --white: #000000;
+  --white-dark:#000;
+  --white-light:#000;
+  --black: #ffffff;
+  --gradient:linear-gradient(45deg, #0b5a7b, #03151d)!important;
+  --gradient-bg: $theme3 !important;
+  --theme:#fff;
+  --light-gray:#d4d4d4;
+  --light-black:#fff;
+  --bordre-color:#3e3e3e;
+  $border-color:#3e3e3e;
+  .bg-lighting {
+      background-color:#000; 
+  }
+  body {
+      background-color:#1c1c21 ;
+  }
+  .navbar {
+      background: linear-gradient(45deg, #0b5a7b, #03151d) !important;
+      & .light-logo {
+          display: none;
+      }
+      & .dark-logo {
+          display: block !important;
+      }
+      & .menu-btn {
+          & img {
+              filter: brightness(100);
+          }
+      }
+  }
+  .navbar-offcanvas {
+      & .of-logo-one {
+          display: none;
+      }
+      & .of-logo-two {
+          display: block !important;
+      }
+  }
+  .mega-menu-link  {
+      &:hover {
+          color: $black;
+      }
+  }
+  .our-mission-section {
+      & .our-value-icon {
+          & img {
+              filter: invert(1);
+          }
+      }
+  }
+}
+
 
 // hero section css start 
 .hero-section{
@@ -2198,8 +2270,6 @@ select:-webkit-autofill:focus {
       background-position: 180px;
     }
   }
-
-  
   @keyframes animate
   {
     0%,10%,100%
@@ -2231,6 +2301,11 @@ select:-webkit-autofill:focus {
       }
     }
   }  
+  &.contact-page-heading {
+    background: url(../img/contact-page.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 // page heading section end
 
@@ -3030,3 +3105,155 @@ select:-webkit-autofill:focus {
   }
 }
 // contact page sedule section end
+
+
+// location section start 
+.location-section {
+  margin-bottom: 55px;
+  margin-top: 85px;
+  & .location-card {
+    border: 1px solid var(--bordre-color);
+    padding:0 15px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 16px;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 50%;
+      transform: translateX(-50%);
+      height: 8px;
+      border-radius: 0 0 16px 16px;
+      background-color: #d9d9d9;
+      bottom: -8px;
+      transition: all 0.3s ease-in-out;
+    }
+    & .location-icon {
+      height: 68px;
+      width: 68px;
+      padding: 11px;
+      border-radius: 13px;
+      margin-top: -30px;
+      background-image: linear-gradient(45deg, #0b5a7b, #03151d);
+      & img {
+        position: relative;
+        z-index: 1;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $theme1;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+    & .location-card-heading {
+      font-size: 17px;
+      margin-block: 13px;
+    }
+    & .location-card-title {
+      font-size: 15px;
+    }
+    & .location-contact {
+      margin-top: 10px;
+      transition: all 0.3s ease-in-out;
+      color: var(--light-gray);
+      &:hover {
+        color: $theme1;
+      }
+    }
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transform: scale(1.03);
+      &::before {
+        background-color: $theme1;
+      }
+      & .location-icon {
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+// location section end
+
+
+// contact us section start 
+.contact-page {
+  margin-top: 45px;
+  & .contact-card-main {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  }
+  & .contact-card-heading {
+    font-size: 18px;
+    font-weight: 600;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -14px;
+      height: 27px;
+      border-radius: 4px;
+      width: 4px;
+      top: 0px;
+      background-color:$theme1;
+    }
+  }
+  & .contact-card {
+    padding: 30px ;
+    & .contact-input-main {
+      & .contact-input {
+        font-weight:500;
+        height: 48px;
+        font-size: 15px;
+        &:focus {
+          box-shadow: 0 0 0 .25rem rgba($theme1,.25);
+        }
+      }
+      & .text-box  {
+        height: 120px;
+      }
+    }
+  }
+  & .contact-connect-card {
+    background-color: $theme1;
+    padding: 30px;
+  }
+  & .contact-link {
+    & .contact-link-icon {
+      height: 50px;
+      width: 50px;
+      border: 1px solid #ffd;
+      color: #fff;
+    }
+  }
+}
+// contact us section end
+
+
+// top banner section start 
+.top_banner {
+  // background: var(--bg);
+  background: #03151d !important;
+  background-size: cover;
+  background-position: center 0%;
+  & .heading-section {
+    & .main-heading {
+      font-size: 28px;
+      padding-bottom: 15px;
+    }
+  }
+  & .top-banner-img {
+    & img {
+      width: 50%;
+    }
+  }
+}
+// top banner section end
+

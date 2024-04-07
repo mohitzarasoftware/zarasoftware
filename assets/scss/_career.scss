@@ -1,0 +1,458 @@
+@charset "UTF-8";
+
+@import "variables";
+
+// New Design Career
+.why-us-box {
+  border-left: 8px solid #335b76;
+  padding: 12px 15px;
+  transform: translate(0px, 0px);
+  transition: all 500ms ease;
+  position: relative;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 30%) !important;
+  background: #fcfcfc !important;
+  &:hover{
+    -webkit-transform: translate(0px, -3px);
+    -moz-transform: translate(0px, -3px);
+    -o-transform: translate(0px, -3px);
+    -ms-transform: translate(0px, -3px);
+    transform: translate(0px, -3px);
+    -webkit-box-shadow: 0px 10px 12px rgba(24, 47, 189, .1);
+    -moz-box-shadow: 0px 10px 12px rgba(24, 47, 189, .1);
+    box-shadow: 0px 10px 12px rgba(24, 47, 189, .1);
+    border-color: transparent;
+    transition: all 500ms ease;
+    border-left: 8px solid #e09c19;
+  }
+}
+.whychoose-section{
+  background-color: #03151d;
+  padding-block: 50px;
+  & .whychoose-card{
+    position: relative;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 7%);
+    border-radius: 3px;
+    margin-bottom: 0;
+    transition: all 500ms ease;
+    z-index: 1;
+    overflow: hidden;
+    & .choose-title {
+      font-size: 18px;
+      color: $theme2;
+    }
+    & .choose-para {
+      font-size: 15px;
+    }
+    &:hover::before{
+      transform: translate3d(0px, 0, 0px);
+      background: linear-gradient(45deg, #0b5a7b, #03151d) !important;
+      transition: all 500ms ease;
+      &:hover img{
+        transform: scale(0.9);
+        transition: all 500ms ease;
+      }
+    }
+    &:hover {
+      & .col-12 {
+        color: $white !important;
+        transition: all 500ms ease;
+      }
+    }
+    &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 3px;
+    transition: all 500ms ease;
+    transform: translate3d(100%, 0px, 0px);
+    z-index: -1;
+    }
+    & .whychoose-inner {
+      position: relative;
+      display: block;
+      padding: 30px 25px 40px 120px;
+      border-radius: 2px;
+      overflow: hidden;
+      z-index: 1;
+      & .love-icons{
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        border-radius: 50%;
+        background: #fff;
+        width: 90px;
+        height: 90px;
+        transition: all 500ms ease;
+        transform: translateY(-50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        border: 2px solid #f6f6f6;
+        & img { 
+          width: 55%;
+        }
+      }
+      & .count{
+        position: absolute;
+          top: 11px;
+          right: 15px;
+          height: 45px;
+          width: 56px;
+          text-align: center;
+          color: rgba(0,0,0,0);
+          -webkit-text-stroke: 1px #ff5805;
+          font-size: 48px;
+          line-height: 45px;
+          font-weight: 700;
+          counter-increment: count;
+          content: counters(count, ".", decimal-leading-zero);
+          transition: all 200ms linear;
+          transition-delay: .1s;
+          -webkit-transition: all 200ms linear;
+          -moz-transition: all 200ms linear;
+          -ms-transition: all 200ms linear;
+          -o-transition: all 200ms linear;
+      }
+      & .working-shape{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        transition-delay: 400ms;
+        transform: translateX(100%);
+        z-index: -1;
+          & img{
+          width: auto;
+          mix-blend-mode: luminosity;
+          opacity: 0.07;
+          }
+      }
+    }
+  }
+}
+
+// Php Frameworks
+
+
+// life work section start 
+.life-work-section {
+    margin-top: 50px;
+    & .technology-role-box {
+        padding: 30px 20px 20px 48px;
+        cursor: pointer;
+        transition: all 400ms linear 0s;
+        position: relative;
+        background-color: #0b5a7b;
+        border-radius: 4px;
+        margin-right: 20px;
+        & .technology-role-para {
+            font-size: 14px;
+            line-height: 25px;
+        }
+        & .technology-role-heading {
+            font-size: 17px;
+        }
+        & .ico_box {
+            position: absolute;
+            z-index: 2;
+            font-size: 22px;
+            top: 50%;
+            left: -36px;
+            right: auto;
+            border-radius: 50px;
+            height: 70px;
+            width: 70px;
+            background-color: #fff;
+            transition: .5s all;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-35px);
+            & img {
+                transition: 0.5s all;
+                position: relative;
+                z-index: 2;
+                max-width: 38px;
+            }
+        }
+        &:hover {
+            & .ico_box {
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                font-size: 58px;
+                z-index: 2;
+                background-color: #0b5a7b;
+                border: 0 !important;
+                align-items: center;
+                justify-content: center;
+                transform: translateY(-50%);
+                & img {
+                    padding: 10px;
+                    transform: scale(1.6);
+                    max-width: 60px;
+                    transition: 0.5s all;
+                }
+            }
+        }
+    }
+}
+@include md {
+    .life-work-section {
+        & .technology-role {
+            & .technology-role-heading {
+                font-size: 16px;
+            }
+        }
+    }
+}
+// life work section end
+
+
+// befefits section start 
+.benefits-section {
+    padding-block: 45px ;
+}
+// befefits section end
+
+// Curents Openings
+.curents-openings {
+  padding: 30px 0 30px;
+  & .curents-openings-box {
+    position: relative;
+    background: linear-gradient(180deg, $theme1 5%, $white 55%);
+    transition: 0.8s all;
+    border-radius: 14px;
+    & .icon_openings {
+      transition: 0.8s all;
+      margin: 0 auto;
+      border-radius: 50px;
+      padding: 8px;
+      background-color: #fff;
+      height: 90px;
+      width: 90px;
+      & img {
+        max-width: 60px;
+        transition: 0.5s all;
+      }
+    }
+    &:hover {
+      background: linear-gradient(180deg, $theme3 5%, $white 55%);
+    }
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@mixin curents-openings-mixin-min-sm() {
+}
+// Medium devices (tablets, 768px and up)
+@mixin curents-openings-mixin-min-md() {
+}
+// Large devices (desktops, 992px and up)
+@mixin curents-openings-mixin-min-lg() {
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin curents-openings-mixin-min-xl() {
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin curents-openings-mixin-min-xxl() {
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin curents-openings-mixin-max-xs() {
+}
+// Small devices (landscape phones, less than 768px)
+@mixin curents-openings-mixin-max-sm() {
+  .curents-openings {
+    padding: 10px 0 30px;
+    & .heading.center {
+      & span {
+        font-size: 22px;
+      }
+    }
+  }
+}
+// Medium devices (tablets, less than 992px)
+@mixin curents-openings-mixin-max-md() {
+  .curents-openings {
+    padding: 80px 0 50px;
+    & .heading.center {
+      text-align: center;
+      font-size: 12px;
+      & span {
+        font-size: 24px;
+      }
+    }
+    & .curents-openings-box {
+      & .icon_openings {
+        height: 75px;
+        width: 75px;
+        & img {
+          max-width: 40px;
+        }
+      }
+    }
+  }
+}
+// Large devices (desktops, less than 1200px)
+@mixin curents-openings-mixin-max-lg() {
+  .curents-openings {
+    & .heading.center {
+      & span {
+        font-size: 26px;
+      }
+    }
+  }
+}
+ // X-Large devices (large desktops, less than 1400px)
+@mixin curents-openings-mixin-max-xl() {
+}
+
+
+
+.apply_now_modal{ 
+  & .modal-content{
+    border: 10px solid rgba(darken($theme1, 40), 0.65);
+    border-radius: 14px;
+    & .btn-close{ 
+      opacity: 1;
+      border: 0;
+      border-left: 4px solid rgba(darken($theme1, 40), 0.65);
+      border-bottom: 4px solid rgba(darken($theme1, 40), 0.65);
+    }
+    & .form-floating{
+      & .form-control{
+        border-left: 4px solid $theme3;
+      }
+    }
+  } 
+}
+ 
+// Small devices (landscape phones, 576px and up)
+@mixin apply_now_modal-mixin-min-sm() {
+}
+// Medium devices (tablets, 768px and up)
+@mixin apply_now_modal-mixin-min-md() {
+}
+// Large devices (desktops, 992px and up)
+@mixin apply_now_modal-mixin-min-lg() {
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin apply_now_modal-mixin-min-xl() {
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin apply_now_modal-mixin-min-xxl() {
+}
+// X-Small devices (portrait phones, less than 576px)
+@mixin apply_now_modal-mixin-max-xs() {
+}
+// Small devices (landscape phones, less than 768px)
+@mixin apply_now_modal-mixin-max-sm() {
+  .apply_now_modal{
+    & .form-floating>label {
+        font-size: 14px;
+        padding: 11px 15px;
+    }
+  }
+}
+// Medium devices (tablets, less than 992px)
+@mixin apply_now_modal-mixin-max-md() {
+ 
+}
+// Large devices (desktops, less than 1200px)
+@mixin apply_now_modal-mixin-max-lg() {
+ 
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin apply_now_modal-mixin-max-xl() {
+}
+
+
+ 
+
+
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  @include curents-openings-mixin-min-sm();
+  @include apply_now_modal-mixin-min-sm();
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  @include curents-openings-mixin-min-md();
+  @include apply_now_modal-mixin-min-md();
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  @include curents-openings-mixin-min-lg();
+  @include apply_now_modal-mixin-min-lg();
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  @include curents-openings-mixin-min-xl();
+  @include apply_now_modal-mixin-min-xl();
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  @include curents-openings-mixin-min-xxl();
+  @include curents-openings-mixin-min-xxl();
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+  @include curents-openings-mixin-max-xl();
+  @include apply_now_modal-mixin-max-xl();
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  @include curents-openings-mixin-max-lg();
+  @include apply_now_modal-mixin-max-lg();
+  .technology-role-box {
+    margin-left: 20px;
+    margin-right: 0;
+}
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  @include curents-openings-mixin-max-md();
+  @include apply_now_modal-mixin-max-md();
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  @include curents-openings-mixin-max-sm();
+  @include apply_now_modal-mixin-max-sm();
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .whychoose-section .whychoose-card .whychoose-inner .count {
+    top: -2px;
+    right: -3px;
+    font-size: 28px;
+}
+  @include curents-openings-mixin-max-xs();
+  @include apply_now_modal-mixin-max-xs();
+  .technology-role-box {
+    margin-left: 20px;
+    margin-right: 0;
+}
+}
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
