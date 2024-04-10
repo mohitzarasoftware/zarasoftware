@@ -52,10 +52,11 @@
         text-align: center;
         top: 30px;
         transition: opacity .3s;
-       & .model-card-img img {
+        & img {
           margin: 0 auto;
           -o-object-fit: contain;
           object-fit: contain;
+          width: 20%;
        }
     }
       & .model-card-title {
@@ -82,6 +83,19 @@
     }
     }
   }
+
+  .model-card:hover .model-card-img {
+    opacity:0
+}
+
+.model-card:hover .model-card-title {
+    top: 0;
+}
+
+.model-card:hover .model-card-text {
+    opacity: 1;
+    visibility: visible
+}
 
 
 
@@ -198,7 +212,7 @@
 }
 
 // industries
-.industries {
+.why-choose-mob-section {
   background: linear-gradient(45deg, #0b5a7b, #03151d) !important;
   & .industries_item {
     cursor: pointer;
@@ -221,6 +235,7 @@
       -ms-transition: all 400ms ease-out 0s;
       -o-transition: all 400ms ease-out 0s;
       transition: all 400ms ease-out 0s;
+      height: 80px;
      
     }
    

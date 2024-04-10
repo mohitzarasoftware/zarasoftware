@@ -2843,6 +2843,9 @@ select:-webkit-autofill:focus {
     width: 100%;
     background-color: rgba(40, 41, 54, 0.91);
   }
+  & .qr-code-footer {
+    height: 160px;
+  }
   & .footer-link {
     font-size: 15px;
     font-weight: 500;
@@ -3088,7 +3091,7 @@ select:-webkit-autofill:focus {
 
 // footer logo slider section start 
 .footer-logo-section {
-  background-color: rgba(40, 41, 54, .91);
+  background-color: #09100de0;
   padding: 55px 10px;
   & .logo-slider {
     height: 140px;
@@ -3185,56 +3188,6 @@ select:-webkit-autofill:focus {
 // location section end
 
 
-// contact us section start 
-.contact-page {
-  margin-top: 45px;
-  & .contact-card-main {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  }
-  & .contact-card-heading {
-    font-size: 18px;
-    font-weight: 600;
-    &::before {
-      content: '';
-      position: absolute;
-      left: -14px;
-      height: 27px;
-      border-radius: 4px;
-      width: 4px;
-      top: 0px;
-      background-color:$theme1;
-    }
-  }
-  & .contact-card {
-    padding: 30px ;
-    & .contact-input-main {
-      & .contact-input {
-        font-weight:500;
-        height: 48px;
-        font-size: 15px;
-        &:focus {
-          box-shadow: 0 0 0 .25rem rgba($theme1,.25);
-        }
-      }
-      & .text-box  {
-        height: 120px;
-      }
-    }
-  }
-  & .contact-connect-card {
-    background-color: $theme1;
-    padding: 30px;
-  }
-  & .contact-link {
-    & .contact-link-icon {
-      height: 50px;
-      width: 50px;
-      border: 1px solid #ffd;
-      color: #fff;
-    }
-  }
-}
-// contact us section end
 
 
 // top banner section start 

@@ -3,7 +3,7 @@ $max_fs: 128;
 
 @for $fs from $min_fs through $max_fs {
     .fs-#{$fs} {
-      font-size: #{$fs}px;
+      font-size: #{$fs}px !important;
     }
 }
 
@@ -21,7 +21,7 @@ $breakpoints: (
     @media (min-width: #{$val}) {
         @for $fs from $min_fs through $max_fs {
             .fs-#{$name}-#{$fs} {
-              font-size: #{$fs}px;
+              font-size: #{$fs}px !important;
             }
         }
     }
