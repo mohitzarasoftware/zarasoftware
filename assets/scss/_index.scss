@@ -2247,40 +2247,7 @@ select:-webkit-autofill:focus {
     font-size: 44px;
     font-weight: 600;
     color: #fff;
-    background-image: 
-    linear-gradient(to right, #6da8ff,$theme2,$theme3,#6da8ff,$theme2,$theme3,#6da8ff); 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-    animation: move 35s linear infinite;
-    @keyframes move {
-        to {
-            background-position: 4500vh;
-        }
-    }
-
   } 
-  @-webkit-keyframes shine {
-    0% {
-      background-position: 0;
-    }
-    60% {
-      background-position: 180px;
-    }
-    100% {
-      background-position: 180px;
-    }
-  }
-  @keyframes animate
-  {
-    0%,10%,100%
-    {
-      width: 0;
-    }
-    50%,70%
-    {
-      width: 100%;
-    }
-  }
   & .breadcrumb-section {
     margin-top: 10px;
     & ul {
@@ -2307,6 +2274,7 @@ select:-webkit-autofill:focus {
     background-position: center;
   }
 }
+
 // page heading section end
 
 

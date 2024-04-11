@@ -229,9 +229,15 @@
 .curents-openings {
   padding: 30px 0 30px;
   & .single-open-job {
-    // background-color:  var(--whtl);
+    background-color:  var(--white-light);
+    & .career-card-title {
+      color: var(--black);
+    }
+    & .job-time {
+      color: var(--black);
+    }
     & .job-info-list {
-      color: #f6f6f6;
+      color: var(--light-gray);
     }
     & .badge {
       background-color: #414141;

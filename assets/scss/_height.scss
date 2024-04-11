@@ -1,0 +1,27 @@
+$min_height: 6;
+$max_height: 500;
+
+@for $height from $min_height through $max_height {
+    .height-#{$height} {
+        height: #{$height}px !important;
+    }
+}
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@each $name, $val in $breakpoints {
+    @media (min-width: #{$val}) {
+        @for $height from $min_height through $max_height {
+            .height-#{$name}-#{$height} {
+                height: #{$height}px !important;
+            }
+        }
+    }
+}
