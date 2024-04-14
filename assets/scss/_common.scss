@@ -212,7 +212,18 @@ opacity: .5;
             }
         }
     } 
-   
+}
+@include sm {
+    .fixed-social {
+        & .fixed-btn-icon {
+            height: 35px;
+            width: 35px;
+            font-size: 15px;
+            & i {
+                font-size: 20px;
+            }
+        }
+    }
 }
 // fixed social button end
 

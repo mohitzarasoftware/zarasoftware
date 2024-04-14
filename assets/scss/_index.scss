@@ -854,13 +854,16 @@
 @include md {
   .service-slider-section {
     margin-top: 45px;
-    padding-top: 45px;
+    padding-top: 40px;
     padding-bottom: 50px;
     & .service-slider-content {
       padding: 10px;
     }
     & .servie-slider-heading {
       font-size: 18px;
+    }
+    & .servie-slider-para {
+      line-height: 28px;
     }
   }
 }
@@ -1143,6 +1146,20 @@
         height: 65px;
         width: 65px;
       }
+    }
+    & .video-card {
+      height: 320px;
+    }
+  }
+}
+@include sm {
+  .video-section {
+    & .video-card {
+      height: 280px;
+    }
+    & .slider-btn {
+      height: 28px;
+      width: 28px;
     }
   }
 }
@@ -1545,6 +1562,21 @@
       gap: 25px 0;
     }
 
+  }
+}
+@include sm {
+  .process-section {
+    & .process-card-main {
+      &::before {
+        top: 94%;
+        right: 50%;
+        transform: translateX(50%) rotate(90deg);
+
+      }
+    }
+    & .proccess-inner {
+      gap: 40px 0;
+    }
   }
 }
 // proccesing section end
@@ -2239,6 +2271,14 @@ select:-webkit-autofill:focus {
 @include md {
   .counter-two-section {
     margin-top: 40px;
+    & .project {
+      & .project-value {
+        font-size: 22px;
+      }
+      & h3 {
+        font-size: 16px;
+      }
+    }
   }
 }
 // counter section end
@@ -2426,7 +2466,6 @@ select:-webkit-autofill:focus {
 
 // our company story section start 
 .ourstory-section {
-  margin-top: 55px;
   & .story-card {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     // padding: 15px;
@@ -2436,12 +2475,12 @@ select:-webkit-autofill:focus {
       font-size: 19px;
       font-weight: 600;
       margin-top: 8px;
-      color: var(---black);
+      color: var(--black);
     }
     & .story-content {
       margin-top: 10px;
       & p {
-        color: var(---black);
+        color: var(--light-gray);
         line-height: 28px;
         font-size: 15px;
         
@@ -2457,7 +2496,6 @@ select:-webkit-autofill:focus {
 .our-mission-section {
   padding-top: 50px;
   padding-bottom: 65px;
-  margin-top: 60px;
   & .our-value-card {
     background: linear-gradient(to bottom, $theme1, $theme3);
     border-radius: 20px;
@@ -2532,7 +2570,7 @@ select:-webkit-autofill:focus {
       font-size: 24px;
       font-weight: 600;
       color: #fff;
-      margin-bottom: 20px ;
+      margin-bottom: 18px ;
     }
     &:hover {
       & .our-value-icon {
@@ -2555,6 +2593,22 @@ select:-webkit-autofill:focus {
   }
   .our-value-three {
       background: linear-gradient(to bottom, #24ff72, #9a4eff);
+  }
+}
+@include md {
+  .our-mission-section {
+    & .our-value-card {
+      & .our-value-heading {
+        font-size: 22px ;
+        margin-bottom: 10px;
+      }
+      & .content {
+        & p {
+          font-size: 15px;
+          line-height: 27px;
+        }
+      }
+    }
   }
 }
 // our mission section end
@@ -2603,7 +2657,6 @@ select:-webkit-autofill:focus {
 
 // new section two start 
 .why-choose-section {
-  padding-block: 50px;
   & .choose-card {
     overflow: hidden;
     border-radius: 5px;
@@ -2795,7 +2848,7 @@ select:-webkit-autofill:focus {
   & .feature-item {
     background-color: var(--white);
     position: relative;
-    padding: 45px 30px 30px 30px;
+    padding: 32px;
     border: 1px solid var(--bordre-color);
     transition:all 0.3s ease-in-out;
     border-radius: 20px;
@@ -2934,6 +2987,23 @@ select:-webkit-autofill:focus {
     &:hover {
       & .number {
         -webkit-text-stroke-color: $theme3;
+      }
+    }
+  }
+}
+@include md {
+  .helpless-section {
+    & .feature-item {
+      padding: 22px;
+      & .title {
+        font-size: 19px;
+        margin-bottom: 15px;
+      }
+      & .feature-para {
+        & p {
+          font-size: 15px;
+          line-height: 27px;
+        }
       }
     }
   }
@@ -3211,6 +3281,15 @@ select:-webkit-autofill:focus {
   & .logo-slider {
     height: 140px;
     width: 180px;
+  }
+}
+@include md {
+  .footer-logo-section {
+    padding: 45px 10px;
+    & .logo-slider {
+      height: 100px;
+      width: 140px;
+    }
   }
 }
 // footer logo slider section end
