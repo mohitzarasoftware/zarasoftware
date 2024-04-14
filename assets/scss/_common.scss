@@ -356,11 +356,18 @@ opacity: .5;
 @include sm {
     .heading-section {
         & .main-heading {
-            font-size: 24px;
+            font-size: 22px;
+            line-height: 33px;
+            &::before {
+                width: 90px;
+            }
         }
     }
     .common-gap {
         margin-top: 45px;
+    }
+    .container-fluid {
+        padding-inline: 0;
     }
 }
 

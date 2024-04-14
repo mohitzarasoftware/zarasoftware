@@ -32,7 +32,7 @@
     --light-gray:#393838db;
     --light-black:#333;
     --bordre-color:#dee2e6;
-    $border-color:#dee2e6;
+     $border-color:#dee2e6;
 
     .bg-lighting {
         background-color:#f8f9fa; 
@@ -40,8 +40,8 @@
 }
 
 [data-theme="dark"] {
-    --white: #000000;
-    --white-dark:#000;
+    --white: #111418;
+    --white-dark:#111418;
     --white-light:#000;
     --black: #ffffff;
     --gradient:linear-gradient(45deg, #0b5a7b, #03151d)!important;
@@ -52,7 +52,7 @@
     --bordre-color:#3e3e3e;
     $border-color:#3e3e3e;
     .bg-lighting {
-        background-color:#000; 
+        background-color:#111418; 
     }
     body {
         background-color:#1c1c21 ;
