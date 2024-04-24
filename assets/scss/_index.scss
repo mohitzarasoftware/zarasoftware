@@ -3404,3 +3404,70 @@ select:-webkit-autofill:focus {
 }
 // top banner section end
 
+// review section start 
+.review-section {
+  background-color: #09100d;
+  & .newsellter-card {
+    height: 400px;
+    &::before {
+      content: '';
+      position: absolute;
+      right: -130px;
+      top: 0;
+      width: 125%;
+      height: 100%;
+      background: url(../img/slider1.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  & .review-icon {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & .review-card {
+    border: 1px solid #393939;
+    padding: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -26px;
+      left: 60px;
+      width: 50px;
+      height: 50px;
+      background: #09100d;
+      border-bottom: 1px solid rgba(249, 248, 248, 0.16);
+      border-left: 1px solid rgba(249, 248, 248, 0.16);
+      transform: rotate(-45deg);
+    }
+    & .review-star {
+      color: #ffa534;
+      gap: 5px;
+    }
+    & .review-content {
+      margin-top: 20px;
+      & p {
+        font-size: 18px;
+        color: #d5d5d5;
+        line-height: 28px;
+      }
+    }
+  }
+  & .review-card-main {
+    & .reviewer-data {
+      gap: 10px;
+    }
+    & .reviewer-img {
+      height: 60px;
+      width: 60px;
+    }
+    & .reviewer-name {
+      color: #fcfcfc;
+    }
+    & .reviewer-location {
+      color: #b1b1b1;
+    }
+  }
+}
+// review section end

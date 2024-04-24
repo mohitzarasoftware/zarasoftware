@@ -28,3 +28,11 @@ var swiper = new Swiper(".footerlogo", {
       },
     },
   });
+
+
+// testimonial js 
+var swiper = new Swiper(".reviewslidernew", {
+  pagination: {
+    el: ".swiper-dots",
+  },
+});
