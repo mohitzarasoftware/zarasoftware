@@ -193,3 +193,40 @@
         height: 140px;
     }
 }
+
+@include sm {
+    .footer-new {
+        & .footer-cta {
+            & .single-cta {
+                gap: 15px;
+                & i {
+                font-size: 22px;
+                }
+            }
+            & .cta-heading {
+                font-size: 18px;
+            }
+            & .cta-title {
+                font-size: 15px;
+            }
+        }
+        & .footer-heading {
+            font-size: 19px;
+        }
+        & .footer-animation-main {
+            height: 220px;
+            width:220px;
+        }
+        & .footer-animation-logo {
+            height: 45px;
+            width: 125px;
+        }
+        & .emblem {
+            width: 205px;
+            height: 205px;
+            & span {
+                font-size: 17px;
+            }
+        } 
+    }
+}
