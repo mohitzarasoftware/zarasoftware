@@ -10,7 +10,10 @@
   transition: all 500ms ease;
   position: relative;
   box-shadow: 1px 1px 3px rgb(0 0 0 / 30%) !important;
-  background: #fcfcfc !important;
+  background: var(--white-light) !important;
+  & >* {
+    color: var(--black) !important;
+  } 
   &:hover{
     -webkit-transform: translate(0px, -3px);
     -moz-transform: translate(0px, -3px);
@@ -31,19 +34,21 @@
   & .whychoose-card{
     position: relative;
     display: block;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0px 10px 60px 0px rgb(0 0 0 / 7%);
     border-radius: 3px;
     margin-bottom: 0;
     transition: all 500ms ease;
     z-index: 1;
     overflow: hidden;
+    border: 1px solid var(--bordre-color);
     & .choose-title {
       font-size: 18px;
       color: $theme2;
     }
     & .choose-para {
       font-size: 15px;
+      color: var(--light-gray) !important; 
     }
     &:hover::before{
       transform: translate3d(0px, 0, 0px);
@@ -222,6 +227,9 @@
 // befefits section start 
 .benefits-section {
     padding-block: 45px ;
+    & .benefits-title {
+      color: var(--light-gray);
+    }
 }
 // befefits section end
 
@@ -230,6 +238,7 @@
   padding: 30px 0 30px;
   & .single-open-job {
     background-color:  var(--white-light);
+    border: 1px solid var(--bordre-color);
     & .career-card-title {
       color: var(--black);
     }
@@ -242,6 +251,15 @@
     & .badge {
       background-color: #414141;
       font-weight: 400;
+    }
+    & .btn {
+      background-color:$theme1;
+      color: #fff;
+      padding: 7px 10px;
+      border: none;
+      &:hover {
+        background-color: rgba($theme1, 0.8);
+      }
     }
   }
 }
@@ -450,3 +468,113 @@
 
 // XX-Large devices (larger desktops)
 // No media query since the xxl breakpoint has no upper bound on its width
+
+
+// career modal start 
+.career-modal {
+  & .modal-dialog {
+    max-width: 50%;
+  }
+}
+// career modal end
+
+
+// job detail page start
+.job-details-section {
+  & .job-details-wrap {
+    & .job-title {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--black);
+    }
+    & .job-detail-para {
+      line-height: 29px;
+      color: var(--light-para);
+    }
+  }
+  & .job-details-info {
+    & h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--black);
+    }
+    & p {
+      color: var(--light-para);
+    }
+    & li {
+      color: var(--light-para);
+    }
+    & ul {
+      list-style-type: disc;
+      padding-left: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  & .job-detail-sidebar {
+    padding: 40px;
+    border: 1px solid var(--bordre-color);
+    & .job-sidebar-heading {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--black);
+    }
+    & .job-sidebar-list  {
+      & i {
+        color: $theme1;
+        margin-top: 5px;
+      }
+    }
+    & .sidebar-item {
+      & .sidebar-title {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--black);
+      }
+      & .sidebar-title-two {
+        font-size: 15px;
+        color: var(--light-gray);
+        margin-top: 2px;
+
+      }
+    }
+  }
+}
+@include md {
+  .job-details-section {
+    & .job-details-wrap {
+      & .job-title {
+        font-size: 24px;
+      }
+      & .job-detail-para {
+        line-height: 28px;
+        font-size: 15px;
+      }
+    }
+    & .job-details-info {
+      & h3 {
+        font-size: 18px;
+      }
+      & p {
+        font-size: 15px;
+      }
+      & li {
+        font-size: 15px;
+        line-height: 26px;
+      }
+      & ul {
+        gap: 6px;
+      }
+    }
+    & .job-detail-sidebar {
+      padding: 18px;
+      & .job-sidebar-heading {
+        font-size: 20px;
+      }
+    }
+  }
+}
+// job detail page end

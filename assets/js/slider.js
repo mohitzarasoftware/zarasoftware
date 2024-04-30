@@ -34,5 +34,6 @@ var swiper = new Swiper(".footerlogo", {
 var swiper = new Swiper(".reviewslidernew", {
   pagination: {
     el: ".swiper-dots",
+    clickable: true, 
   },
 });

@@ -1,0 +1,27 @@
+$min_gap: 0;
+$max_gap: 50; // Change from $max_height to $max_gap
+
+@for $gap from $min_gap through $max_gap {
+    .gap-#{$gap} {
+        gap: #{$gap}px !important;
+    }
+}
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@each $name, $val in $breakpoints {
+    @media (min-width: #{$val}) {
+        @for $gap from $min_gap through $max_gap {
+            .gap-#{$name}-#{$gap} {
+                gap: #{$gap}px !important;
+            }
+        }
+    }
+}

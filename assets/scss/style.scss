@@ -7,14 +7,15 @@
 @import "./cursor";
 @import "./mobileapp";
 @import "./breakpoint";
-@import "./padding";
-@import "./font-size";
-@import "./line-height";
-@import "./margin";
-@import "./width";
+@import "./common-component/padding";
+@import "./common-component/font-size";
+@import "./common-component/line-height";
+@import "./common-component/margin";
+@import "./common-component/width";
 @import "./contact";
 @import "./footer";
-@import "./height";
+@import "./common-component/height";
+@import "./common-component/gap";
 @import "./navbar";
 
 
@@ -30,6 +31,7 @@
     --gradient-bg:linear-gradient(45deg, #0b5a7b, #03151d);
     --theme:#0d6efd;
     --light-gray:#393838db;
+    --light-para:#000;
     --light-black:#333;
     --bordre-color:#dee2e6;
      $border-color:#dee2e6;
@@ -48,6 +50,7 @@
     --gradient-bg: $theme3 !important;
     --theme:#fff;
     --light-gray:#d4d4d4;
+    --light-para:#dadada;
     --light-black:#fff;
     --bordre-color:#3e3e3e;
     $border-color:#3e3e3e;

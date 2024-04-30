@@ -2,6 +2,14 @@
     background-image: linear-gradient(rgba(9, 16, 13, 0.88), rgba(9, 16, 13, 0.88)), url(../img/footer.png);
     background-size: cover;
     background-repeat: no-repeat;
+    & .footer-review {
+        & .footer-review-card {
+            background-color: #343a3f;
+            & .review-star {
+                color: #FF9529 ;
+            }
+        }
+    }
     &::before {
         content: "";
         width: 100%;
@@ -73,7 +81,7 @@
             height: 3px;
             border-radius: 30px;
             display: block;
-            background: linear-gradient(90deg, $theme1, transparent);
+            background: linear-gradient(90deg, $theme2, transparent);
         }
     }  
     & .footer-link {
@@ -107,7 +115,7 @@
           transition: all .3s ease-in-out;
         }
         &:hover {
-          color: $theme1 !important;
+          color: $white !important;
           padding-left: 19px;
           &::before {
             opacity: 1;
@@ -117,45 +125,24 @@
           }
         }
     }
-    & .footer-cta {
-    position: relative;
-    z-index: 1;
-    border-bottom: 1px solid #8b8b8b;
-    & .single-cta {
-        gap: 15px;
-        & i {
-        color: #ffff;
-        font-size: 30px;
-        margin-top: 8px;
-        }
-    }
-    & .cta-heading {
-        color: #fff;
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 2px;
-    }
-    & .cta-title {
-        color: #a9a9a9;
-        font-size: 15px;
-    }
-    }
     & .footer-list {
         gap: 10px;
     }
     & .contact-list {
         & .icon {
             height: 29px;
-            width: 29px;
-            border: 2px solid $theme1;
-            color: $theme1;
+            min-width: 29px;
+            max-width: 29px;
+            border: 2px solid #ffff;
+            color: #fff;
             transition: all 0.3s ease-in-out;
         }
         & li {
             gap: 12px;
             &:hover {
                 & .icon {
-                    background-color: $theme1;
+                    border-color: $theme2;
+                    background-color: $theme2;
                     color: #fff;
                 }
             }
@@ -164,7 +151,7 @@
             color: #bbb;
             transition: all 0.3s ease-in-out;
             &:hover {
-                color: $theme1
+                color: $theme2;
             }
         }
     }
@@ -182,8 +169,8 @@
         color: #ffff;
         transition: all 0.3s ease-in-out;
         &:hover {
-            background-color: $theme1;
-            border-color: $theme1;
+            background-color: $theme2;
+            border-color: $theme2;
         }
     }
     & .copyright-new {
@@ -220,6 +207,11 @@
         & .footer-animation-logo {
             height: 45px;
             width: 125px;
+        }
+        & .contact-list {
+            & a {
+                font-size: 15px;
+            }
         }
         & .emblem {
             width: 205px;

@@ -170,7 +170,7 @@ opacity: .5;
     right: 0;
     z-index: 3;
     top: 50%;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 6px;
     transform: translateY(-50%) translateX(97px);
@@ -338,6 +338,9 @@ opacity: .5;
         font-size:15px;
         & a {
             color: $theme2;
+        }
+        &.active {
+            color: var(--light-gray) !important;
         }
         &::before {
             color: $theme2;

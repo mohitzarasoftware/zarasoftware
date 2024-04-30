@@ -130,6 +130,8 @@
         top: 50%;
         transform: translateY(-50%);
         font-size: 32px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
         border-right: 1px solid rgba($white, 0.1);
       }
       & span {
@@ -155,6 +157,9 @@
     }
     & a {
       &:hover {
+        & i {
+          color: $theme2;
+        }
         &::after {
           background: rgba($theme1, 0.1);
         }

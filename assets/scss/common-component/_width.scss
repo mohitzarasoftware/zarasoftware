@@ -1,0 +1,28 @@
+$min_width: 6;
+$max_width: 500;
+
+@for $width from $min_width through $max_width {
+    .width-#{$width} {
+        width: #{$width}px !important;
+    }
+}
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@each $name, $val in $breakpoints {
+    @media (min-width: #{$val}) {
+        @for $width from $min_width through $max_width {
+            .width-#{$name}-#{$width} {
+                width: #{$width}px !important;
+            }
+        }
+    }
+}
+
