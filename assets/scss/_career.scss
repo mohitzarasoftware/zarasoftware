@@ -144,6 +144,22 @@
   }
 }
 
+@include sm {
+  .whychoose-section {
+    & .whychoose-card {
+      & .whychoose-inner {
+        padding: 15px 15px 15px 95px;
+        & .love-icons{
+          position: absolute;
+          left: 12px;
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
 // Php Frameworks
 
 
@@ -466,9 +482,15 @@
   @include curents-openings-mixin-max-xs();
   @include apply_now_modal-mixin-max-xs();
   .technology-role-box {
-    margin-left: 20px;
-    margin-right: 0;
-}
+    margin-left: 30px;
+    margin-right: 0 !important;
+  }
+
+  .life-work-section {
+    & .technology-role-box {
+      padding: 15px 15px 15px 40px
+    }
+  } 
 }
 
 // XX-Large devices (larger desktops)
