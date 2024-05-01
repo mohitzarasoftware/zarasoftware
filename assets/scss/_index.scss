@@ -3402,6 +3402,38 @@ select:-webkit-autofill:focus {
       width: 50%;
     }
   }
+  & .top-banner-para {
+    color: #d5d5d5;
+  }
+}
+@include lg {
+  .top_banner{
+    & .main-heading {
+      &::before {
+        margin-inline: auto !important;
+      }
+      &::after {
+        animation: headings 3s infinite !important;
+        margin-inline: auto !important;
+      }
+    }
+  }
+}
+@include md {
+  .top_banner{
+    & .heading-section {
+      & .main-heading {
+        font-size: 24px;
+        line-height: 33px;
+        padding-bottom: 9px;
+      }
+    }
+    & .top-banner-para {
+      font-size: 15px;
+      margin-top: 10px !important;
+      line-height: 27px;
+    }
+  }
 }
 // top banner section end
 

@@ -214,6 +214,7 @@
 }
 @include md {
     .life-work-section {
+      margin-top: 40px;
         & .technology-role {
             & .technology-role-heading {
                 font-size: 16px;
@@ -239,6 +240,7 @@
   & .single-open-job {
     background-color:  var(--white-light);
     border: 1px solid var(--bordre-color);
+    padding: 40px !important;
     & .career-card-title {
       color: var(--black);
     }
@@ -289,6 +291,9 @@
       & span {
         font-size: 22px;
       }
+    }
+    & .single-open-job {
+      padding: 15px !important;
     }
   }
 }
