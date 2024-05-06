@@ -104,7 +104,8 @@
   }
   & .hero-content {
     & .hero-heading {
-      font-size: 50px;
+      font-size: 40px;
+      line-height: 55px;
       font-weight: 600;
       color: $white;
       & .type {
@@ -170,7 +171,7 @@
     display: flex;
     gap: 20px;
     & .item{
-      width: 150px;
+      width: 155px;
       height: 220px;
       flex-shrink: 0;
       position: relative;
@@ -188,6 +189,8 @@
         right: 10px;
         & .title{
           font-weight: 500;
+          font-size: 14px;
+          line-height: 25px;
         }
         & .description{
           font-weight: 300;
@@ -392,7 +395,9 @@
       & .hero-heading {
         flex-direction: column;
         font-size: 29px;
-        gap: 2px;
+        gap: 0px;
+        line-height: 42px;
+        margin-bottom: 15px;
       }
       & .hero-para {
         line-height: 27px;
@@ -402,6 +407,11 @@
       & .item {
         width: 140px;
         height: 190px;
+      }
+    }
+    & .carousel {
+      & .hero-inner {
+        top: 35px;
       }
     }
   }
@@ -2467,9 +2477,9 @@ select:-webkit-autofill:focus {
 // our company story section start 
 .ourstory-section {
   & .story-card {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     // padding: 15px;
-    border: 1px solid #cac9c933;
+    // border: 1px solid hsla(0, 1%, 79%, 0.2);
     // border-radius: 8px;
     & .story-card-heading {
       font-size: 19px;
@@ -2478,14 +2488,24 @@ select:-webkit-autofill:focus {
       color: var(--black);
     }
     & .story-content {
-      margin-top: 10px;
+      margin-top: 20px;
       & p {
         color: var(--light-gray);
-        line-height: 28px;
+        line-height: 29px;
         font-size: 15px;
         
       }
-      @include ellipsis (13)
+      @include ellipsis (12)
+    }
+  }
+  & .company-img {
+    height: 350px;
+    & img {
+      animation: mover 2s infinite  alternate;
+    }
+    @keyframes mover {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-20px); }
     }
   }
 }
