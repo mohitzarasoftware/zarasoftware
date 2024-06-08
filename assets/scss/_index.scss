@@ -4128,3 +4128,62 @@ select:-webkit-autofill:focus {
   }
   
 }
+
+// call moda start 
+.enquiry-modal  {
+  & .enquiry-modal-heading {
+    color: var(--black);
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $theme1;
+      bottom: 0;
+      height:3px;
+      width: 75px;
+      border-radius: 3px;
+
+    }
+  }
+  & .modal-content {
+    overflow: unset;
+    background-color: var(--white-dark);
+    border-radius: 30px;
+  }
+  & .close-btn {
+    right: -12px;
+    top: -12px;
+    opacity: 1;
+    height: 35px;
+    width: 35px;
+    background-color: rgba($theme1, 1);
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+  & .zara-input{
+    color: var(--light-para);
+    border: 1px solid var(--bordre-color);
+    &::placeholder {
+      color: var(--light-para);
+    }
+    &:focus {
+      box-shadow: 0 0 0 .25rem rgba(#0d6efd, .25);
+    }
+  }
+  & .common-btn {
+    padding-inline: 29px;
+  }
+}
+@include sm {
+  .enquiry-modal {
+    & .modal-dialog {
+      width: 92%;
+      margin-inline: auto;
+    }
+  }
+}

@@ -992,7 +992,7 @@
                 <div class="swiper mySwiper cubeslider h-100 rounded-3 founder-slider overflow-hidden">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="https://swiperjs.com/demos/images/nature-1.jpg" class="h-100 w-100"/>
+                      <img src="assets/img/admin-pan-soft-service.jpeg" class="h-100 w-100"/>
                     </div>
                     <div class="swiper-slide">
                       <img src="https://swiperjs.com/demos/images/nature-2.jpg" class="h-100 w-100"/>
@@ -2015,7 +2015,6 @@
       </div>
     </section>
     <!-- counter section end -->
-    
 
     <!-- faq section start  -->
     <section class="container-fluid commongap bg-lighting faq-section">
@@ -2263,7 +2262,6 @@
       </div>
     </div>
     <!-- get in touch section end -->
-
 
     <!-- footer logo slider section start  -->
     <section class="footer-logo-section container-fluid">
@@ -2539,23 +2537,23 @@
                 </div>
                 <ul class="social-list list-unstyled d-flex align-items-center m-0">
                   <li>
-                    <a href="https://www.facebook.com/profile.php?id=100094412626402" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
+                    <a href="https://www.facebook.com/profile.php?id=100094412626402" target="_blank" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
                       <i class="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.youtube.com/@zaraSoftwareprovider" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
+                    <a href="https://www.youtube.com/@zaraSoftwareprovider" target="_blank" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
                       <i class="fa-brands fa-youtube"></i>
                     </a>
                   </li>
       
                   <li>
-                    <a href="" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
+                    <a href="" target="_blank" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
                       <i class="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
+                    <a href="" target="_blank" class="social-link rounded-circle fs-14 d-flex text-decoration-none align-items-center justify-content-center">
                       <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
@@ -3219,6 +3217,67 @@
         </div>
       </div>
     </div>
+
+    <!-- enquiry modal start -->
+    <div class="modal fade enquiry-modal" id="enquirymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <button type="button" class="close-btn border-0 position-absolute rounded-circle z-2 shadow-none" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <div class="modal-body">
+            <div class="enquiry-modal-heading text-center position-relative padding-bottom-md-7 padding-bottom-xs-4 fs-md-20 fw-semibold line-height-xs-28 margin-bottom-md-20 margin-bottom-xs-15 fs-17">
+              Enquiry Form
+            </div>
+           <form action="">
+            <div class="row gap-md-16 gap-14">
+              <div class="col-12">
+                <div class="zara-input-group">
+                  <input type="text" class="form-control zara-input bg-transparent height-48 fw-medium fs-15" placeholder="Full Name">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="zara-input-group">
+                  <input type="email" class="form-control zara-input bg-transparent height-48 fw-medium fs-15" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="zara-input-group">
+                  <input type="tel" class="form-control zara-input bg-transparent height-48 fw-medium fs-15" placeholder="Mobile No.">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="zara-input-group">
+                  <input type="text" class="form-control zara-input bg-transparent height-48 fw-medium fs-15" placeholder="City">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="zara-input-group">
+                  <input type="text" class="form-control zara-input bg-transparent height-48 fw-medium fs-15" placeholder="Subject">
+                </div>
+              </div>
+              <div class="col-12 margin-top-lg-8 margin-bottom-lg-10">
+                <div class="d-flex align-items-center justify-content-center">
+                  <button typ class="common-btn border-0 overflow-hidden position-relative d-inline-flex align-items-center justify-content-center">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+           </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() {
+          $('#enquirymodal').modal('show');
+        }, 5000);
+      });
+    </script>
 
   </body>
 </html>

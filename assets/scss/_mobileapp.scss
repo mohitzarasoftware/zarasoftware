@@ -227,6 +227,7 @@
 .why-choose-mob-section {
   background: linear-gradient(45deg, #0b5a7b, #03151d) !important;
   & .industries_item {
+    // background-color: var(--white-light);
     cursor: pointer;
     &:hover img{
       -moz-transform: scale(-1) rotate(180deg);
