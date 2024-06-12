@@ -4129,7 +4129,7 @@ select:-webkit-autofill:focus {
   
 }
 
-// call moda start 
+// call modal start 
 .enquiry-modal  {
   & .enquiry-modal-heading {
     color: var(--black);
@@ -4187,3 +4187,44 @@ select:-webkit-autofill:focus {
     }
   }
 }
+// call modal end
+
+
+// coming soon page start 
+.coming-soon-section {
+  height: 100vh;
+  background: url(../img/coming-soon.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  & .input-box {
+    & input {
+      height: 100%;
+      outline: none;
+      border: none;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.2);
+      font-weight: 400;
+      padding: 10px;
+      &::placeholder {
+        color: $white;
+        color: $white;
+      }
+    }
+    & button {
+      height: 100%;
+      outline: none;
+      border: none;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.2);
+      font-weight: 400;
+      padding: 10px 18px;
+      color: $white;
+    }
+  }
+  
+  
+}
+// coming soon page end
