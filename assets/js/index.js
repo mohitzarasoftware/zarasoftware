@@ -14,48 +14,48 @@
 
 
 // dark and light theme toggle 
-function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
-  if (localStorageTheme === "dark" || (localStorageTheme === null && systemSettingDark.matches)) {
-    return "dark"; // Set default to dark if localStorage theme is "dark" or if localStorage theme is null and system setting is dark
-  }
+// function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+//   if (localStorageTheme === "dark" || (localStorageTheme === null && systemSettingDark.matches)) {
+//     return "dark"; // Set default to dark if localStorage theme is "dark" or if localStorage theme is null and system setting is dark
+//   }
 
-  return "light";
-}
+//   return "light";
+// }
 
-function updateButton({ buttonEl, isDark }) {
-  const newCta = isDark ? "Change to light theme" : "Change to dark theme";
-  buttonEl.setAttribute("aria-label", newCta);
-  buttonEl.innerText = newCta;
-}
+// function updateButton({ buttonEl, isDark }) {
+//   const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+//   buttonEl.setAttribute("aria-label", newCta);
+//   buttonEl.innerText = newCta;
+// }
 
-function updateThemeOnHtmlEl({ theme }) {
-  document.querySelector("html").setAttribute("data-theme", theme);
-}
+// function updateThemeOnHtmlEl({ theme }) {
+//   document.querySelector("html").setAttribute("data-theme", theme);
+// }
 
-const button = document.querySelector("[data-theme-toggle]");
-const localStorageTheme = localStorage.getItem("theme");
-const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+// const button = document.querySelector("[data-theme-toggle]");
+// const localStorageTheme = localStorage.getItem("theme");
+// const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+// let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
 
-updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
-updateThemeOnHtmlEl({ theme: currentThemeSetting });
+// updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+// updateThemeOnHtmlEl({ theme: currentThemeSetting });
 
-button.addEventListener("click", (event) => {
-  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+// button.addEventListener("click", (event) => {
+//   const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
 
-  localStorage.setItem("theme", newTheme);
-  updateButton({ buttonEl: button, isDark: newTheme === "dark" });
-  updateThemeOnHtmlEl({ theme: newTheme });
+//   localStorage.setItem("theme", newTheme);
+//   updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+//   updateThemeOnHtmlEl({ theme: newTheme });
 
-  currentThemeSetting = newTheme;
-});
+//   currentThemeSetting = newTheme;
+// });
 
-// Ensure theme consistency on page load
-if (currentThemeSetting === "dark") {
-  localStorage.setItem("theme", "dark");
-} else {
-  localStorage.setItem("theme", "light");
-}
+// // Ensure theme consistency on page load
+// if (currentThemeSetting === "dark") {
+//   localStorage.setItem("theme", "dark");
+// } else {
+//   localStorage.setItem("theme", "light");
+// }
 
 
 
